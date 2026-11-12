@@ -54,7 +54,7 @@ for sk in MENU:
 pool = [r for r in m_train if r["skill"] in TEACH]         # annotation pool for feedback (real mistakes: base cannot name these)
 dump("dev.jsonl",dev); dump("calib.jsonl",calib); dump("feedback_pool.jsonl",pool)
 # locked exam: HWU64 (never used) + MASSIVE test + untouched MASSIVE leftovers, capped per skill
-CAP=420
+CAP=300
 exam=[]
 for sk in MENU:
     h=by(hw,sk); rng.shuffle(h)

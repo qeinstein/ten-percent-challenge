@@ -1,0 +1,5 @@
+base pass 343 s for 1393
+base dev acc 0.777; clinc old-skill base-correct 388
+{'margin': 4, 'pos_frac': 0.1, 'q_neutral': 0.995, 'temp': 0.02} | teach 0.846 devkept 0.9957 | clinc cook-teach 0.803 clinc kept 0.9961 | leak 2.0 active 664 | shuffled teach 0.008  [1112s]
+{'margin': 6, 'pos_frac': 0.1, 'q_neutral': 0.995, 'temp': 0.02} | teach 0.874 devkept 0.9957 | clinc cook-teach 0.897 clinc kept 0.9948 | leak 3.0 active 664 | shuffled teach 0.009  [1840s]
+{'margin': 6, 'pos_frac': 0.0, 'q_neutral': 0.995, 'temp': 0.02} | teach 0.886 devkept 0.9936 | clinc cook-teach 0.910 clinc kept 0.9923 | leak 4.5 active 687 | shuffled teach 0.011  [2611s]

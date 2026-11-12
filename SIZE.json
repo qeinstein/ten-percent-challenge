@@ -1,0 +1,109 @@
+{
+ "files": [
+  [
+   "LICENSE",
+   10174
+  ],
+  [
+   "NOTICE.txt",
+   416
+  ],
+  [
+   "bits.bin",
+   214988032
+  ],
+  [
+   "code/answer.py",
+   1552
+  ],
+  [
+   "code/feedback.py",
+   2141
+  ],
+  [
+   "code/tpc/__init__.py",
+   0
+  ],
+  [
+   "code/tpc/artifact.py",
+   2165
+  ],
+  [
+   "code/tpc/device.py",
+   129
+  ],
+  [
+   "code/tpc/learn.py",
+   7794
+  ],
+  [
+   "code/tpc/steer.py",
+   4482
+  ],
+  [
+   "code/tpc/task.py",
+   7487
+  ],
+  [
+   "config.json",
+   2878
+  ],
+  [
+   "generation_config.json",
+   313
+  ],
+  [
+   "index.json",
+   22139
+  ],
+  [
+   "neutral_prompts.jsonl",
+   14090
+  ],
+  [
+   "scales.bin",
+   26873504
+  ],
+  [
+   "small.pt",
+   276079
+  ],
+  [
+   "task_default.json",
+   1402
+  ],
+  [
+   "tokenizer.json",
+   11422654
+  ],
+  [
+   "tokenizer_config.json",
+   5404
+  ]
+ ],
+ "total_bytes": 253642835,
+ "denominator_fp16_bytes": 3440091640,
+ "ratio": 0.07373141809675744,
+ "sha256": {
+  "LICENSE": "69849221bfb90053de2134ef5e6d540287b4b98062326492f1f96f5da685524b",
+  "NOTICE.txt": "0458cf19671f24d21121422f771b19dccda75152b9fbb95c518b151ece0a04a3",
+  "bits.bin": "a9d96bcfc824dadd17f5e49e3e47c5315140ff6fda71118bf464faddde2343bf",
+  "code/answer.py": "c3ed06ce745e3d3e7bacf87dbae8770508d65101085f116ba8ad8c90b78bb5e6",
+  "code/feedback.py": "367ac43942a55d64a8270ad95e4c3e9384b5ff50a10b2a9a07893922c3e0bd0f",
+  "code/tpc/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "code/tpc/artifact.py": "6e7ee92b2983d10841978c7f341e289f8e67cf842a9099db8e51b07fcd327029",
+  "code/tpc/device.py": "4bd753f3a775b946eabe2aae8bfc3770584dd572874d4f24f1ac7460eb03ca02",
+  "code/tpc/learn.py": "2e975379c10f9dc559052a1b22288388decc6350cda1826df2519dbeac043b16",
+  "code/tpc/steer.py": "ab45fc3d1916f17703a7659f5ffceaac77e399db3f9fc6b237eecc2b568a7122",
+  "code/tpc/task.py": "f27e4a3e5754757622dd313285183065fda5c1ebc6cc708e2817539395812d71",
+  "config.json": "a9e37c13a2315353ae3fad3f33759e506598cf57b52abeae50d5318b7dd147fb",
+  "generation_config.json": "ac5fa673967419cfbe771573f2b84ada1c5569c09f737713985037f6993e118c",
+  "index.json": "5ca5848a350764d06b1c2e48786d06e697a6370be2d642bcd39b708d32597cb8",
+  "neutral_prompts.jsonl": "a55fd911f65d5dbb39ea14f12281ec26fb97ce42b74db14f7de098e6962798c5",
+  "scales.bin": "c47be3a2ba7e44409c832e9abc9ed4e247ce447e608e23027f081b8ee906407e",
+  "small.pt": "a20875ea1c56eedc0ce3001c5eae16de64660d2d675ba4661b496f9b0ec6adb8",
+  "task_default.json": "526b2bdd303af8eb67d234092cd5d16d558412a98f29f2320e66cdc8cb27f88a",
+  "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+  "tokenizer_config.json": "443bfa629eb16387a12edbf92a76f6a6f10b2af3b53d87ba1550adfcf45f7fa0"
+ }
+}

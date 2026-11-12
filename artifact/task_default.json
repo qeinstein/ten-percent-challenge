@@ -1,0 +1,55 @@
+{
+ "instruction": "You are the request router of a voice assistant. Pick the one skill that should handle the user's request.\nSkills:\n- Alarm: alarms and wake-up calls\n- Calendar: meetings, events and the schedule\n- Email: reading and sending email\n- SmartHome: lights, plugs, vacuum, coffee machine, volume and other devices\n- Lists: to-do and shopping lists\n- Music: playing songs, artists and radio\n- News: news headlines\n- Question: general questions, definitions, maths, currency, stocks\n- Transport: taxis, trains, tickets and traffic\n- Weather: weather and forecasts\nAnswer with the skill name only.",
+ "fewshot": [
+  [
+   "wake me up at seven tomorrow",
+   "Alarm"
+  ],
+  [
+   "what is on my schedule for friday afternoon",
+   "Calendar"
+  ],
+  [
+   "send a message to john saying i am late",
+   "Email"
+  ],
+  [
+   "turn the living room lights off",
+   "SmartHome"
+  ],
+  [
+   "add milk and eggs to my shopping list",
+   "Lists"
+  ],
+  [
+   "play some jazz",
+   "Music"
+  ],
+  [
+   "what is the latest on the election",
+   "News"
+  ],
+  [
+   "who wrote pride and prejudice",
+   "Question"
+  ],
+  [
+   "book me a taxi to the airport",
+   "Transport"
+  ],
+  [
+   "will it rain in london tomorrow",
+   "Weather"
+  ],
+  [
+   "cancel my meeting with sarah",
+   "Calendar"
+  ],
+  [
+   "how tall is mount everest",
+   "Question"
+  ]
+ ],
+ "request_tag": "Request",
+ "answer_tag": "Skill"
+}
