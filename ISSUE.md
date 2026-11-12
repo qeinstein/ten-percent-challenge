@@ -4,7 +4,7 @@ Entry: Bonsai-1.7B at 7.37% of fp16; feedback changes no weight (byte-identical)
 
 **Repo (code, locked exam, every output):** https://github.com/qeinstein/ten-percent-challenge
 **Artifact:** https://huggingface.co/Fluxx08/tenpct-bonsai-1.7b-weightfree-feedback. Every file is verified against the sha256 values in `SIZE.json`. It can also be rebuilt byte-for-byte from `prism-ml/Bonsai-1.7B-unpacked` with `scripts/build_artifact.py`.
-**Hardware:** runs on a laptop in about 4 GB (Apple Silicon MPS and CPU tested; CUDA also supported). Tested with torch 2.15.0 and transformers 5.22.2 (`requirements.txt`).
+**Hardware:** runs on a laptop in about 4 GB (Apple Silicon MPS and CPU tested; CUDA is auto-selected but untested). Tested with torch 2.15.0 and transformers 5.22.2 (`requirements.txt`).
 
 ## What it is
 
@@ -21,7 +21,7 @@ Entry: Bonsai-1.7B at 7.37% of fp16; feedback changes no weight (byte-identical)
 |---|---|---|---|
 | 1 | Size counts everything | ✅ PASS | **7.373%** (253,643,100 B) of the start model's fp16 checkpoint (3,440,091,640 B). Weights, tokenizer, config, code, task file and neutral prompts are all counted (`SIZE.json`, per-file sha256). The feedback state adds about 40 KB (7.374%). |
 | 2 | Same means faithful (≥ 98% overall, ≥ 95% per kind) | ✅ PASS | The compressed model keeps **100%** of the start model's correct items: a lossless 1-bit repack with identical greedy outputs. **After feedback**, over 8 draws: overall **99.50–99.87%** of 2,393 base-correct items, every kind **≥ 96.6%**, every source ≥ 99.2%. |
-| 3 | Exam is unseen ground (≥ 2,000 items, ≥ 300 per kind, ≥ 500 from an unused source) | ✅ PASS | **3,000** items, **300 per kind** (10 kinds), **1,176 from HWU64**, which was never used to build, tune or calibrate. Sealed by hash in commit `0c7a493` before any model ran on it. Settings frozen in `48df345` before the single run; the runner claims the exam once. |
+| 3 | Exam is unseen ground (≥ 2,000 items, ≥ 300 per kind, ≥ 500 from an unused source) | ✅ PASS | **3,000** items, **300 per kind** (10 kinds), **1,176 from HWU64**, which was never used to build, tune or calibrate. Hash and frozen settings committed in `48df345` (12:00:53 UTC), before the single run claimed the exam (12:06:14 UTC). No development code ever reads `exam/`. A first 4,200-item version, sealed in `0c7a493`, was capped to 300 per kind before any model ran on it. |
 | 4 | No new trained parts | ✅ PASS | **No weight is changed:** sha256 is identical before and after feedback, and `feedback.py` asserts it. There is no head, classifier on the output, adapter, LoRA, prompt edit, or stored answer or annotation to look up. The answer is the original model's own forward pass and unembedding. The feedback state is about 40 KB of activation-space directions computed in closed form (no gradients, no optimiser); see the mechanism below. |
 | 5 | Feedback has to teach (≤ 25 items, ≥ 25 locked teach items, neighbours not broken) | ✅ PASS | **25** annotations; **287** locked unseen teach items. Two new skills learned at once go from **1.0% → 84.3%** (8 draws: 82.2–87.1%), with the unseen-source HWU64 part at 83–92%. Nearby exam kinds (Lists, Question, SmartHome) ≥ 96.6%, overall ≥ 99.5%. 199 of 200 annotations mark real base mistakes. |
 | 6 | Shuffled and empty feedback do clearly worse | ✅ PASS | Shuffled labels **0.3%**; new labels on 25 unrelated requests **1.0%**; empty feedback **1.0%** (outputs identical to the release); against real **82.2–87.1%**. |
@@ -32,7 +32,7 @@ Entry: Bonsai-1.7B at 7.37% of fp16; feedback changes no weight (byte-identical)
 
 ## Locked exam
 
-The exam was sealed by hash in commit `0c7a493` before any model ran on it. The settings were frozen before the single exam run.
+The exam was built from data at 08:2x UTC and has never been read by any development code: only `build_data.py`, `final_exam.py`, `extra_draws.py` and `score.py` open `exam/`. A first 4,200-item version was hash-committed in `0c7a493`. Before any model ran on it, it was capped to 300 per kind to fit laptop compute. The hashes of the 3,000-item exam actually used were committed in `48df345` (12:00:53 UTC) together with the frozen settings. The single exam run claimed it at 12:06:14 UTC (`results/.exam_claimed`).
 
 | | |
 |---|---|

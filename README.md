@@ -46,7 +46,7 @@ The labels are generated text: a word outside the menu comes out as text. Labels
 
 ## Commands
 
-Requirements: `pip install -r requirements.txt`. Tested with Python 3.14, torch 2.15.0 and transformers 5.22.2; the prefix cache uses the transformers 5 cache API, so older transformers versions are not supported. Runs on Apple Silicon (MPS) and CPU (both tested) and on CUDA, in about 4 GB of memory.
+Requirements: `pip install -r requirements.txt`. Tested with Python 3.14, torch 2.15.0 and transformers 5.22.2; the prefix cache uses the transformers 5 cache API, so older transformers versions are not supported. Tested on Apple Silicon (MPS) and CPU, in about 4 GB of memory. CUDA is selected automatically when present but was not tested.
 
 ```sh
 # answer: one line per request
@@ -69,7 +69,7 @@ To get `ART`, run `huggingface-cli download Fluxx08/tenpct-bonsai-1.7b-weightfre
 - **Task:** MASSIVE (en) and HWU64 scenarios. Menu: Alarm, Calendar, Email, SmartHome, Lists, Music, News, Question, Transport, Weather. Taught by feedback only: Cooking, Takeaway.
 - **Build and dev:** small slices of MASSIVE train and validation (`data/dev.jsonl`, `data/calib.jsonl`). Annotation pool: MASSIVE-train cooking and takeaway (`data/feedback_pool.jsonl`).
 - **Locked:** `exam/exam.jsonl` (3,000) and `exam/teach.jsonl` (287) are MASSIVE test plus untouched MASSIVE leftovers plus HWU64. Utterances are deduplicated across every split.
-- **Seal:** hashes are in `exam/MANIFEST.json`, committed in `0c7a493` before any model ever ran on them.
+- **Seal:** The exam was built from data at 08:2x UTC and has never been read by any development code: only `build_data.py`, `final_exam.py`, `extra_draws.py` and `score.py` open `exam/`. A first 4,200-item version was hash-committed in `0c7a493`. Before any model ran on it, it was capped to 300 per kind to fit laptop compute. The hashes of the 3,000-item exam actually used were committed in `48df345` (12:00:53 UTC) together with the frozen settings. The single exam run claimed it at 12:06:14 UTC (`results/.exam_claimed`).
 - **Single run:** the runner `scripts/final_exam.py` checks the hashes, claims the exam once (`results/.exam_claimed`), and runs every arm with draws 101/202/303. The settings were frozen in commit `48df345` from the dev sweep (`results/dev_sweep.log`) before the exam ran.
 - **Extra draws:** `scripts/extra_draws.py` later added draws 404–808 with the same frozen settings. Nothing was retuned, and all 8 draws are reported.
 
