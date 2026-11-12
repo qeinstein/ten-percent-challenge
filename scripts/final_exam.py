@@ -4,13 +4,16 @@ Arms: base (release), real feedback x3 draws, shuffled labels, new labels on unr
 Feedback annotations come ONLY from data/feedback_pool.jsonl (MASSIVE train); the locked teach set is MASSIVE test + HWU64."""
 import sys, os, json, random, hashlib, time, math, collections, torch; sys.path.insert(0, ".")
 from tpc import task, artifact, steer, learn
-ART = sys.argv[1]; OUT = "results"; os.makedirs(OUT, exist_ok=True)
+ART = sys.argv[1]; DRY = os.environ.get("DRY") == "1"; OUT = "/tmp/dry_results" if DRY else "results"; os.makedirs(OUT, exist_ok=True)
 man = json.load(open("exam/MANIFEST.json"))
 for f, h in man.items(): assert hashlib.sha256(open(f, "rb").read()).hexdigest() == h, f"lock broken: {f}"
-claim = "results/.exam_claimed"
-assert not os.path.exists(claim), "the locked exam was already run once"
-open(claim, "w").write(time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()))
-exam = task.read("exam/exam.jsonl"); teach = task.read("exam/teach.jsonl")
+if DRY:   # pipeline check on NON-locked data only
+    exam = task.read("data/dev.jsonl")[:40]; teach = task.read("data/feedback_pool.jsonl")[-30:]
+else:
+    claim = "results/.exam_claimed"
+    assert not os.path.exists(claim), "the locked exam was already run once"
+    open(claim, "w").write(time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()))
+    exam = task.read("exam/exam.jsonl"); teach = task.read("exam/teach.jsonl")
 model, tok = artifact.load_model(ART)
 def wsha(): return hashlib.sha256(b"".join(p.detach().cpu().numpy().tobytes() for p in model.parameters())).hexdigest()
 W0 = wsha()
@@ -31,7 +34,7 @@ def run(state, tag, verify=False):
     out, nact = R1.generate_steered(TXT, BASE, H)
     rec = {"teach": out[:NT], "exam": out[NT:], "regenerated": nact}
     if verify:   # check the zero-gate shortcut against full generation on 300 random exam requests
-        ii = random.Random(9).sample(range(NT, len(TXT)), 300)
+        ii = random.Random(9).sample(range(NT, len(TXT)), min(300, len(TXT) - NT))
         full = R1.generate([TXT[i] for i in ii]); rec["shortcut_check"] = sum(full[k] == out[i] for k, i in enumerate(ii)) / len(ii)
         print(tag, "shortcut agreement", rec["shortcut_check"], flush=True)
     json.dump(rec, open(f"{OUT}/outputs_{tag}.json", "w")); print(tag, "regenerated", nact, flush=True)
