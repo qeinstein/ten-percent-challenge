@@ -15,6 +15,21 @@ Entry: Bonsai-1.7B at 7.37% of fp16; feedback changes no weight (byte-identical)
   - **Nothing goes into the prompt**, and no annotation text or answer is stored or looked up.
   - The unchanged layers 21–27 and the model's own unembedding write the label, and `answer.py` can emit any string.
 
+## The rules, one by one
+
+| # | Rule | Status | Evidence |
+|---|---|---|---|
+| 1 | Size counts everything | ✅ PASS | **7.373%** (253,643,100 B) of the start model's fp16 checkpoint (3,440,091,640 B). Weights, tokenizer, config, code, task file and neutral prompts are all counted (`SIZE.json`, per-file sha256). The feedback state adds about 40 KB (7.374%). |
+| 2 | Same means faithful (≥ 98% overall, ≥ 95% per kind) | ✅ PASS | The compressed model keeps **100%** of the start model's correct items: a lossless 1-bit repack with identical greedy outputs. **After feedback**, over 8 draws: overall **99.50–99.87%** of 2,393 base-correct items, every kind **≥ 96.6%**, every source ≥ 99.2%. |
+| 3 | Exam is unseen ground (≥ 2,000 items, ≥ 300 per kind, ≥ 500 from an unused source) | ✅ PASS | **3,000** items, **300 per kind** (10 kinds), **1,176 from HWU64**, which was never used to build, tune or calibrate. Sealed by hash in commit `0c7a493` before any model ran on it. Settings frozen in `48df345` before the single run; the runner claims the exam once. |
+| 4 | No new trained parts | ✅ PASS | **No weight is changed:** sha256 is identical before and after feedback, and `feedback.py` asserts it. There is no head, classifier on the output, adapter, LoRA, prompt edit, or stored answer or annotation to look up. The answer is the original model's own forward pass and unembedding. The feedback state is about 40 KB of activation-space directions computed in closed form (no gradients, no optimiser); see the mechanism below. |
+| 5 | Feedback has to teach (≤ 25 items, ≥ 25 locked teach items, neighbours not broken) | ✅ PASS | **25** annotations; **287** locked unseen teach items. Two new skills learned at once go from **1.0% → 84.3%** (8 draws: 82.2–87.1%), with the unseen-source HWU64 part at 83–92%. Nearby exam kinds (Lists, Question, SmartHome) ≥ 96.6%, overall ≥ 99.5%. 199 of 200 annotations mark real base mistakes. |
+| 6 | Shuffled and empty feedback do clearly worse | ✅ PASS | Shuffled labels **0.3%**; new labels on 25 unrelated requests **1.0%**; empty feedback **1.0%** (outputs identical to the release); against real **82.2–87.1%**. |
+| 7 | Do the real job | ✅ PASS | The skill word is generated text: free greedy decoding, exact-string match, no constrained decoding or answer letters. New labels come out as words. |
+| 8 | The original has something to keep | ✅ PASS | Base **79.8%** against 10% chance, and below the ceiling on every kind (39–94%). |
+| 9 | Spirit over letter | ✅ PASS | The model learns new skills from a handful of labels **without any weight changing** and **without prompt, memory or head**. It keeps working and learning on data it never saw: CLINC150 (Cooking 1% → 84%, old skills 99.74% kept), a continual third skill (0% → 70%), and a brand-new bank-support task via `--task` (a new `Loans` team from 6 labels). |
+| — | Maintainer's check: answer command, feedback command, own data, own feedback | ✅ READY | `answer.py` and `feedback.py` take any `{"text","label"}` rows and any task file (`--task`). They were tested end to end on a clean copy, on MPS and CPU (`results/e2e/TRANSCRIPT.md`). |
+
 ## Locked exam
 
 The exam was sealed by hash in commit `0c7a493` before any model ran on it. The settings were frozen before the single exam run.
