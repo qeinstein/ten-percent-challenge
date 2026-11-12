@@ -1,6 +1,0 @@
-baseline
-baseline accuracy 0.125
-{"keep": 0.5, "artifact_bytes": 47695859, "fp16_state_bytes": 325653120, "ratio": 0.14646215887629144, "accuracy": 0.21875, "teacher_agreement": 0.25, "seconds": 37.3}
-{"keep": 0.1, "artifact_bytes": 21593587, "fp16_state_bytes": 325653120, "ratio": 0.06630855248676874, "accuracy": 0.34375, "teacher_agreement": 0.125, "seconds": 189.8}
-{"keep": 0.02, "artifact_bytes": 6230585, "fp16_state_bytes": 325653120, "ratio": 0.01913258193257906, "accuracy": 0.25, "teacher_agreement": 0.46875, "seconds": 60.2}
-{"keep": 0.005, "artifact_bytes": 2388863, "fp16_state_bytes": 325653120, "ratio": 0.007335606058372786, "accuracy": 0.28125, "teacher_agreement": 0.03125, "seconds": 44.3}
