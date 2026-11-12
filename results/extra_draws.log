@@ -1,0 +1,7 @@
+W1112 14:19:03.493000 29881 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+base outputs identical to the original run: 1.0
+404 done
+505 done
+606 done
+707 done
+808 done

@@ -26,7 +26,9 @@ def main():
     spec = task.load_spec(a.task or os.path.join(a.artifact, "task_default.json"))
     neutral = [json.loads(l)["text"] for l in open(os.path.join(a.artifact, "neutral_prompts.jsonl"))]
     state, _ = learn.fit(model, tok, ann, neutral, spec=spec, device=dev, verbose=False)
-    if os.path.exists(sp) and not a.fresh: state = steer.merge(steer.load(sp, dev), state)
+    if os.path.exists(sp) and not a.fresh:
+        prev = steer.load(sp, dev); state = steer.merge(prev, state)
+        print(f"merged with the earlier feedback state (labels {prev['labels']}); use --fresh, or an empty file first, to start over")
     steer.save(state, sp)
     assert wsha(a.artifact) == before
     print(f"learned labels {state['labels']} -> {sp} ({os.path.getsize(sp)} bytes); weights unchanged (sha256 {before[:16]}...)")

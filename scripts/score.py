@@ -33,3 +33,11 @@ json.dump(S, open("results/summary.json", "w"), indent=1)
 print(f"base exam acc {S['base_acc']:.4f} (chance .10); base-correct items {len(ok)}")
 for tag, a in S["arms"].items():
     print(f"{tag:12s} teach {a['teach_acc']:.3f}  retention {a.get('retention', float('nan')):.4f} (lo {a.get('retention_wilson_lo', float('nan')):.4f})  min-kind {a.get('min_kind_retention', float('nan')):.4f}  identical {a.get('identical_outputs', float('nan')):.4f}  leak {a.get('new_label_leak_on_exam')}")
+R = {t: a for t, a in S["arms"].items() if t.startswith("real_")}
+if R:
+    agg = {k: {"mean": sum(a[k] for a in R.values())/len(R), "min": min(a[k] for a in R.values()), "max": max(a[k] for a in R.values())}
+           for k in ("teach_acc", "retention", "retention_wilson_lo", "min_kind_retention", "identical_outputs")}
+    agg["draws"] = len(R); S["real_aggregate"] = agg
+    json.dump(S, open("results/summary.json", "w"), indent=1)
+    print(f"REAL x{len(R)}: teach mean {agg['teach_acc']['mean']:.3f} [{agg['teach_acc']['min']:.3f}-{agg['teach_acc']['max']:.3f}]  "
+          f"retention mean {agg['retention']['mean']:.4f} min {agg['retention']['min']:.4f}  worst kind {agg['min_kind_retention']['min']:.4f}")

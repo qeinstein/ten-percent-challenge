@@ -12,7 +12,7 @@ assert task.load_spec(str(OUT/"task_default.json")).prefix == task.PREFIX
 with open(OUT/"neutral_prompts.jsonl", "w") as f:
     for r in task.read("data/calib.jsonl"): f.write(json.dumps({"text": r["text"]}) + "\n")   # labels dropped
 code = OUT/"code"; shutil.rmtree(code, ignore_errors=True); (code/"tpc").mkdir(parents=True)
-for f in ["answer.py", "feedback.py"]: shutil.copy2(f, code/f)
+for f in ["answer.py", "feedback.py", "requirements.txt"]: shutil.copy2(f, code/f)
 for f in ["__init__.py", "task.py", "artifact.py", "steer.py", "learn.py", "device.py"]: shutil.copy2("tpc/"+f, code/"tpc"/f)
 tot = 0; rows = []
 for p in sorted(OUT.rglob("*")):

@@ -1,0 +1,93 @@
+{
+ "results/ann_real_101.json": {
+  "annotated": 25,
+  "base_was_wrong": 25,
+  "base_answers": [
+   "Lists",
+   "Music",
+   "Question",
+   "SmartHome"
+  ]
+ },
+ "results/ann_real_202.json": {
+  "annotated": 25,
+  "base_was_wrong": 25,
+  "base_answers": [
+   "Email",
+   "Food",
+   "Lists",
+   "Music",
+   "Question",
+   "Recipe",
+   "Science",
+   "SmartHome"
+  ]
+ },
+ "results/ann_real_303.json": {
+  "annotated": 25,
+  "base_was_wrong": 25,
+  "base_answers": [
+   "Lists",
+   "Music",
+   "Question",
+   "Science",
+   "SmartHome",
+   "Transport"
+  ]
+ },
+ "results/ann_real_404.json": {
+  "annotated": 25,
+  "base_was_wrong": 25,
+  "base_answers": [
+   "Food",
+   "Lists",
+   "Music",
+   "Question",
+   "SmartHome"
+  ]
+ },
+ "results/ann_real_505.json": {
+  "annotated": 25,
+  "base_was_wrong": 25,
+  "base_answers": [
+   "Lists",
+   "Music",
+   "Question",
+   "SmartHome"
+  ]
+ },
+ "results/ann_real_606.json": {
+  "annotated": 25,
+  "base_was_wrong": 24,
+  "base_answers": [
+   "Cooking",
+   "Lists",
+   "Music",
+   "Question",
+   "Recipe",
+   "SmartHome"
+  ]
+ },
+ "results/ann_real_707.json": {
+  "annotated": 25,
+  "base_was_wrong": 25,
+  "base_answers": [
+   "Lists",
+   "Music",
+   "Question",
+   "SmartHome",
+   "Transport"
+  ]
+ },
+ "results/ann_real_808.json": {
+  "annotated": 25,
+  "base_was_wrong": 25,
+  "base_answers": [
+   "Email",
+   "Lists",
+   "Music",
+   "Question",
+   "SmartHome"
+  ]
+ }
+}
