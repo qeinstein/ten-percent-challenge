@@ -1,0 +1,36 @@
+{
+  "status": "complete",
+  "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+  "revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+  "data_revision": "custom_synthetic_v1",
+  "baseline_dev": {
+    "correct": 11,
+    "total": 64,
+    "accuracy": 0.171875,
+    "oov_tokens": 0,
+    "input_tokens": 0
+  },
+  "compressed_dev": {
+    "correct": 11,
+    "total": 64,
+    "accuracy": 0.171875,
+    "oov_tokens": 0,
+    "input_tokens": 5797
+  },
+  "unique_fp16_bytes": 269030016,
+  "artifact_bytes": 20040924,
+  "artifact_ratio": 0.07449326397839563,
+  "vocab_rows": 49152,
+  "calibration_examples": 32,
+  "activation_positions": 256,
+  "operators": 210,
+  "elapsed_seconds": 166.0411456300062,
+  "limitations": [
+    "Development data are our synthetic templates; development results are not an independent held-out exam.",
+    "Artifact includes compiler support and loader but excludes runtime libraries; standalone reload must be verified.",
+    "Low input-vocabulary coverage maps omitted tokens to fallback; OOV count is reported.",
+    "No feedback learning.",
+    "Per-layer calibration is collected from the original dense trajectory, not sequentially updated.",
+    "Timing limit is checked between operators and does not shut down the GPU."
+  ]
+}

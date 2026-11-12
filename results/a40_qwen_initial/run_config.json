@@ -1,0 +1,22 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+  "device": "cuda",
+  "data_dir": "gpu/prepared",
+  "calibration": 256,
+  "calibration_positions": 32,
+  "vocab": 0,
+  "vocab_source": 512,
+  "dev": 256,
+  "max_length": 512,
+  "density": 0.02,
+  "group_size": 128,
+  "seed": 42,
+  "data_revision": "public-C2-content-split-v1",
+  "data_manifest_sha256": "fab9cc8507d27b19763c261fe6a1acf8dbdef14c6c49488079cf4aeda21ee9d8",
+  "runner_sha256": "0f84f333fedf6fc3a191a29cb858da4a54fb81813e8063008b7a3bf6672d83c9",
+  "compiler_sha256": "1f67ae70549dcd7572a7cb0d1bb4a281344bf0bc87f90f36a523250726227030",
+  "feedback_sha256": "38a9e956fdb2de9650485e7a50ae6a77f9158064a09e768f1d6982e9a2367f76",
+  "loader_sha256": "c104091dffbeaecb0a950d68bd67970058ff82e437c593ed38f05d633729fc10",
+  "dataset_sha256": "93ad1ee822580fe46f99e7f6d0e32eead1700d41e83289f8b52a1ec4237d3c77"
+}

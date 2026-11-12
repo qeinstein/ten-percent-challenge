@@ -1,0 +1,18 @@
+{
+  "calibration_ids": [
+    "C2-calib-1309",
+    "C2-calib-228",
+    "C2-calib-51",
+    "C2-calib-1518",
+    "C2-calib-563",
+    "C2-calib-501",
+    "C2-calib-457",
+    "C2-calib-285"
+  ],
+  "development_ids": [
+    "C2-dev-1571",
+    "C2-dev-208",
+    "C2-dev-1414",
+    "C2-dev-1578"
+  ]
+}

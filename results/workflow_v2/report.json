@@ -1,0 +1,72 @@
+{
+  "status": "complete",
+  "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+  "revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+  "data_revision": "public-C2-content-split-v1",
+  "baseline_dev": {
+    "correct": 1,
+    "total": 8,
+    "accuracy": 0.125,
+    "oov_tokens": 0,
+    "input_tokens": 0
+  },
+  "compressed_dev": {
+    "correct": 0,
+    "total": 8,
+    "accuracy": 0.0,
+    "oov_tokens": 0,
+    "input_tokens": 1701
+  },
+  "feedback": {
+    "annotations": 8,
+    "annotation_ids": [
+      "C2-dev-772",
+      "C2-dev-1177",
+      "C2-dev-872",
+      "C2-dev-400",
+      "C2-dev-651",
+      "C2-dev-949",
+      "C2-dev-1044",
+      "C2-dev-1688"
+    ],
+    "unseen_new_before": {
+      "correct": 1,
+      "total": 11,
+      "accuracy": 0.09090909090909091,
+      "oov_tokens": 0,
+      "input_tokens": 2368
+    },
+    "unseen_new_after": {
+      "correct": 1,
+      "total": 11,
+      "accuracy": 0.09090909090909091,
+      "oov_tokens": 0,
+      "input_tokens": 2368
+    },
+    "old_dev_after": {
+      "correct": 0,
+      "total": 8,
+      "accuracy": 0.0,
+      "oov_tokens": 0,
+      "input_tokens": 1701
+    },
+    "strength": 0.25,
+    "method": "per-tool running hidden-state means; no examples stored"
+  },
+  "unique_fp16_bytes": 269030016,
+  "artifact_bytes": 20054518,
+  "artifact_ratio": 0.07454379365609523,
+  "vocab_rows": 49152,
+  "calibration_examples": 8,
+  "activation_positions": 64,
+  "operators": 210,
+  "elapsed_seconds": 197.97096926000086,
+  "limitations": [
+    "Public C2-derived data may overlap model pretraining; development results are not an independent held-out exam.",
+    "Artifact includes compiler support and loader but excludes runtime libraries; standalone reload must be verified.",
+    "Low input-vocabulary coverage maps omitted tokens to fallback; OOV count is reported.",
+    "Feedback prototype statistics may need organizer interpretation; evaluation is preliminary.",
+    "Per-layer calibration is collected from the original dense trajectory, not sequentially updated.",
+    "Timing limit is checked between operators and does not shut down the GPU."
+  ]
+}

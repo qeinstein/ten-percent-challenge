@@ -1,0 +1,11 @@
+{
+  "status": "development_gates_failed",
+  "gates": {
+    "package_size_unchanged": true,
+    "size_at_most_10_percent": true,
+    "dev_at_least_base": false,
+    "feedback_generalizes": true,
+    "feedback_retains_dev": false
+  },
+  "exam_used": false
+}

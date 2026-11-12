@@ -1,0 +1,464 @@
+{
+  "status": "complete",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+  "package": "/workspace/qwen-search-sevenpct/best_7pct/package",
+  "examples": 64,
+  "head_max_abs_difference": 0.0,
+  "other_parameter_mismatches": [],
+  "single_vs_batch_predictions_equal": true,
+  "operators_loaded": 196,
+  "stages": [
+    {
+      "correct": 50,
+      "total": 64,
+      "accuracy": 0.78125,
+      "oov_tokens": 0,
+      "input_tokens": 12058,
+      "prediction_counts": [
+        10,
+        10,
+        9,
+        18,
+        17
+      ],
+      "stage": "dense"
+    },
+    {
+      "correct": 48,
+      "total": 64,
+      "accuracy": 0.75,
+      "oov_tokens": 0,
+      "input_tokens": 12058,
+      "prediction_counts": [
+        10,
+        9,
+        9,
+        15,
+        21
+      ],
+      "stage": "quantized_embedding"
+    },
+    {
+      "correct": 13,
+      "total": 64,
+      "accuracy": 0.203125,
+      "oov_tokens": 0,
+      "input_tokens": 12058,
+      "prediction_counts": [
+        46,
+        0,
+        17,
+        0,
+        1
+      ],
+      "stage": "compressed_through_layer_0"
+    },
+    {
+      "correct": 14,
+      "total": 64,
+      "accuracy": 0.21875,
+      "oov_tokens": 0,
+      "input_tokens": 12058,
+      "prediction_counts": [
+        25,
+        1,
+        2,
+        34,
+        2
+      ],
+      "stage": "compressed_through_layer_1"
+    },
+    {
+      "correct": 11,
+      "total": 64,
+      "accuracy": 0.171875,
+      "oov_tokens": 0,
+      "input_tokens": 12058,
+      "prediction_counts": [
+        57,
+        0,
+        7,
+        0,
+        0
+      ],
+      "stage": "compressed_through_layer_2"
+    },
+    {
+      "correct": 12,
+      "total": 64,
+      "accuracy": 0.1875,
+      "oov_tokens": 0,
+      "input_tokens": 12058,
+      "prediction_counts": [
+        64,
+        0,
+        0,
+        0,
+        0
+      ],
+      "stage": "compressed_through_layer_3"
+    },
+    {
+      "correct": 12,
+      "total": 64,
+      "accuracy": 0.1875,
+      "oov_tokens": 0,
+      "input_tokens": 12058,
+      "prediction_counts": [
+        64,
+        0,
+        0,
+        0,
+        0
+      ],
+      "stage": "compressed_through_layer_4"
+    },
+    {
+      "correct": 11,
+      "total": 64,
+      "accuracy": 0.171875,
+      "oov_tokens": 0,
+      "input_tokens": 12058,
+      "prediction_counts": [
+        53,
+        4,
+        0,
+        7,
+        0
+      ],
+      "stage": "compressed_through_layer_5"
+    },
+    {
+      "correct": 12,
+      "total": 64,
+      "accuracy": 0.1875,
+      "oov_tokens": 0,
+      "input_tokens": 12058,
+      "prediction_counts": [
+        64,
+        0,
+        0,
+        0,
+        0
+      ],
+      "stage": "compressed_through_layer_6"
+    },
+    {
+      "correct": 12,
+      "total": 64,
+      "accuracy": 0.1875,
+      "oov_tokens": 0,
+      "input_tokens": 12058,
+      "prediction_counts": [
+        0,
+        0,
+        64,
+        0,
+        0
+      ],
+      "stage": "compressed_through_layer_7"
+    },
+    {
+      "correct": 12,
+      "total": 64,
+      "accuracy": 0.1875,
+      "oov_tokens": 0,
+      "input_tokens": 12058,
+      "prediction_counts": [
+        0,
+        0,
+        64,
+        0,
+        0
+      ],
+      "stage": "compressed_through_layer_8"
+    },
+    {
+      "correct": 12,
+      "total": 64,
+      "accuracy": 0.1875,
+      "oov_tokens": 0,
+      "input_tokens": 12058,
+      "prediction_counts": [
+        64,
+        0,
+        0,
+        0,
+        0
+      ],
+      "stage": "compressed_through_layer_9"
+    },
+    {
+      "correct": 16,
+      "total": 64,
+      "accuracy": 0.25,
+      "oov_tokens": 0,
+      "input_tokens": 12058,
+      "prediction_counts": [
+        0,
+        43,
+        0,
+        21,
+        0
+      ],
+      "stage": "compressed_through_layer_10"
+    },
+    {
+      "correct": 12,
+      "total": 64,
+      "accuracy": 0.1875,
+      "oov_tokens": 0,
+      "input_tokens": 12058,
+      "prediction_counts": [
+        64,
+        0,
+        0,
+        0,
+        0
+      ],
+      "stage": "compressed_through_layer_11"
+    },
+    {
+      "correct": 12,
+      "total": 64,
+      "accuracy": 0.1875,
+      "oov_tokens": 0,
+      "input_tokens": 12058,
+      "prediction_counts": [
+        0,
+        0,
+        64,
+        0,
+        0
+      ],
+      "stage": "compressed_through_layer_12"
+    },
+    {
+      "correct": 12,
+      "total": 64,
+      "accuracy": 0.1875,
+      "oov_tokens": 0,
+      "input_tokens": 12058,
+      "prediction_counts": [
+        1,
+        0,
+        63,
+        0,
+        0
+      ],
+      "stage": "compressed_through_layer_13"
+    },
+    {
+      "correct": 12,
+      "total": 64,
+      "accuracy": 0.1875,
+      "oov_tokens": 0,
+      "input_tokens": 12058,
+      "prediction_counts": [
+        64,
+        0,
+        0,
+        0,
+        0
+      ],
+      "stage": "compressed_through_layer_14"
+    },
+    {
+      "correct": 12,
+      "total": 64,
+      "accuracy": 0.1875,
+      "oov_tokens": 0,
+      "input_tokens": 12058,
+      "prediction_counts": [
+        0,
+        0,
+        64,
+        0,
+        0
+      ],
+      "stage": "compressed_through_layer_15"
+    },
+    {
+      "correct": 13,
+      "total": 64,
+      "accuracy": 0.203125,
+      "oov_tokens": 0,
+      "input_tokens": 12058,
+      "prediction_counts": [
+        62,
+        0,
+        0,
+        2,
+        0
+      ],
+      "stage": "compressed_through_layer_16"
+    },
+    {
+      "correct": 11,
+      "total": 64,
+      "accuracy": 0.171875,
+      "oov_tokens": 0,
+      "input_tokens": 12058,
+      "prediction_counts": [
+        0,
+        62,
+        0,
+        0,
+        2
+      ],
+      "stage": "compressed_through_layer_17"
+    },
+    {
+      "correct": 11,
+      "total": 64,
+      "accuracy": 0.171875,
+      "oov_tokens": 0,
+      "input_tokens": 12058,
+      "prediction_counts": [
+        0,
+        64,
+        0,
+        0,
+        0
+      ],
+      "stage": "compressed_through_layer_18"
+    },
+    {
+      "correct": 12,
+      "total": 64,
+      "accuracy": 0.1875,
+      "oov_tokens": 0,
+      "input_tokens": 12058,
+      "prediction_counts": [
+        63,
+        0,
+        0,
+        0,
+        1
+      ],
+      "stage": "compressed_through_layer_19"
+    },
+    {
+      "correct": 12,
+      "total": 64,
+      "accuracy": 0.1875,
+      "oov_tokens": 0,
+      "input_tokens": 12058,
+      "prediction_counts": [
+        64,
+        0,
+        0,
+        0,
+        0
+      ],
+      "stage": "compressed_through_layer_20"
+    },
+    {
+      "correct": 12,
+      "total": 64,
+      "accuracy": 0.1875,
+      "oov_tokens": 0,
+      "input_tokens": 12058,
+      "prediction_counts": [
+        64,
+        0,
+        0,
+        0,
+        0
+      ],
+      "stage": "compressed_through_layer_21"
+    },
+    {
+      "correct": 12,
+      "total": 64,
+      "accuracy": 0.1875,
+      "oov_tokens": 0,
+      "input_tokens": 12058,
+      "prediction_counts": [
+        64,
+        0,
+        0,
+        0,
+        0
+      ],
+      "stage": "compressed_through_layer_22"
+    },
+    {
+      "correct": 12,
+      "total": 64,
+      "accuracy": 0.1875,
+      "oov_tokens": 0,
+      "input_tokens": 12058,
+      "prediction_counts": [
+        0,
+        0,
+        64,
+        0,
+        0
+      ],
+      "stage": "compressed_through_layer_23"
+    },
+    {
+      "correct": 12,
+      "total": 64,
+      "accuracy": 0.1875,
+      "oov_tokens": 0,
+      "input_tokens": 12058,
+      "prediction_counts": [
+        64,
+        0,
+        0,
+        0,
+        0
+      ],
+      "stage": "compressed_through_layer_24"
+    },
+    {
+      "correct": 12,
+      "total": 64,
+      "accuracy": 0.1875,
+      "oov_tokens": 0,
+      "input_tokens": 12058,
+      "prediction_counts": [
+        64,
+        0,
+        0,
+        0,
+        0
+      ],
+      "stage": "compressed_through_layer_25"
+    },
+    {
+      "correct": 12,
+      "total": 64,
+      "accuracy": 0.1875,
+      "oov_tokens": 0,
+      "input_tokens": 12058,
+      "prediction_counts": [
+        64,
+        0,
+        0,
+        0,
+        0
+      ],
+      "stage": "compressed_through_layer_26"
+    },
+    {
+      "correct": 12,
+      "total": 64,
+      "accuracy": 0.1875,
+      "oov_tokens": 0,
+      "input_tokens": 12058,
+      "prediction_counts": [
+        64,
+        0,
+        0,
+        0,
+        0
+      ],
+      "stage": "compressed_through_layer_27"
+    }
+  ],
+  "elapsed_seconds": 217.92837380198762
+}

@@ -1,0 +1,103 @@
+{
+  "layer": 0,
+  "operators": [
+    {
+      "name": "model.layers.0.self_attn.q_proj",
+      "shape": [
+        3584,
+        3584
+      ],
+      "retained_fraction": 0.0599888376891613,
+      "relative_frobenius_error": 0.8404948115348816,
+      "norm_ratio": 0.5315512418746948,
+      "cosine_similarity": 0.5422460436820984,
+      "sign_disagreements": 0,
+      "zero_rows": 0,
+      "finite": true
+    },
+    {
+      "name": "model.layers.0.self_attn.k_proj",
+      "shape": [
+        512,
+        3584
+      ],
+      "retained_fraction": 0.0599888376891613,
+      "relative_frobenius_error": 0.8425485491752625,
+      "norm_ratio": 0.5252802968025208,
+      "cosine_similarity": 0.5387583374977112,
+      "sign_disagreements": 0,
+      "zero_rows": 0,
+      "finite": true
+    },
+    {
+      "name": "model.layers.0.self_attn.v_proj",
+      "shape": [
+        512,
+        3584
+      ],
+      "retained_fraction": 0.0599888376891613,
+      "relative_frobenius_error": 0.8415923118591309,
+      "norm_ratio": 0.523909330368042,
+      "cosine_similarity": 0.5403262972831726,
+      "sign_disagreements": 0,
+      "zero_rows": 0,
+      "finite": true
+    },
+    {
+      "name": "model.layers.0.self_attn.o_proj",
+      "shape": [
+        3584,
+        3584
+      ],
+      "retained_fraction": 0.0599888376891613,
+      "relative_frobenius_error": 0.84966641664505,
+      "norm_ratio": 0.5202352404594421,
+      "cosine_similarity": 0.5273877382278442,
+      "sign_disagreements": 0,
+      "zero_rows": 0,
+      "finite": true
+    },
+    {
+      "name": "model.layers.0.mlp.gate_proj",
+      "shape": [
+        18944,
+        3584
+      ],
+      "retained_fraction": 0.0599888376891613,
+      "relative_frobenius_error": 0.8226627707481384,
+      "norm_ratio": 0.6141847372055054,
+      "cosine_similarity": 0.5726385116577148,
+      "sign_disagreements": 0,
+      "zero_rows": 0,
+      "finite": true
+    },
+    {
+      "name": "model.layers.0.mlp.up_proj",
+      "shape": [
+        18944,
+        3584
+      ],
+      "retained_fraction": 0.0599888376891613,
+      "relative_frobenius_error": 0.8484777212142944,
+      "norm_ratio": 0.5262038707733154,
+      "cosine_similarity": 0.533494770526886,
+      "sign_disagreements": 0,
+      "zero_rows": 0,
+      "finite": true
+    },
+    {
+      "name": "model.layers.0.mlp.down_proj",
+      "shape": [
+        3584,
+        18944
+      ],
+      "retained_fraction": 0.060019005089998245,
+      "relative_frobenius_error": 0.853114902973175,
+      "norm_ratio": 0.5023177862167358,
+      "cosine_similarity": 0.5246565341949463,
+      "sign_disagreements": 0,
+      "zero_rows": 0,
+      "finite": true
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+results/smollm/*.pt
+results/**/package/
+results/**/*.pt.gz

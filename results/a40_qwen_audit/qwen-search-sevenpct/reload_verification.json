@@ -1,0 +1,13 @@
+{
+  "correct": 208,
+  "total": 963,
+  "accuracy": 0.21599169262720663,
+  "oov_tokens": 0,
+  "input_tokens": 181573,
+  "parameters_loaded": 338,
+  "before_feedback": {
+    "correct": 196,
+    "total": 963,
+    "accuracy": 0.2035306334371755
+  }
+}
