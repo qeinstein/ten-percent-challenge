@@ -1,0 +1,5 @@
+W1112 13:34:00.865000 24105 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+base {'clinc_cooking_taught': 0.013333333333333334, 'clinc_old_kept': 1.0, 'recommend_taught': 0.0, 'identical_to_base': 1.0}
+round1_cooking_takeaway {'clinc_cooking_taught': 0.84, 'clinc_old_kept': 0.9974226804123711, 'recommend_taught': 0.0, 'identical_to_base': 0.7833333333333333}
+round2_plus_recommend {'clinc_cooking_taught': 0.8133333333333334, 'clinc_old_kept': 0.9974226804123711, 'recommend_taught': 0.7, 'identical_to_base': 0.6972222222222222}
+round2_control_label_on_unrelated {'clinc_cooking_taught': 0.84, 'clinc_old_kept': 0.9974226804123711, 'recommend_taught': 0.0, 'identical_to_base': 0.7833333333333333}

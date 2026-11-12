@@ -1,0 +1,10 @@
+W1112 13:06:14.822000 22322 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+base pass 774 s
+real_101 shortcut agreement 1.0
+real_101 regenerated 428
+real_202 regenerated 422
+real_303 regenerated 438
+shuffled regenerated 428
+unrelated regenerated 93
+empty regenerated 0
+done; score with scripts/score.py

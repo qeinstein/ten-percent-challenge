@@ -1,0 +1,531 @@
+{
+ "exam_items": 3000,
+ "base_acc": 0.7976666666666666,
+ "chance": 0.1,
+ "base_acc_per_kind": {
+  "Alarm": 0.9433333333333334,
+  "Calendar": 0.6133333333333333,
+  "Email": 0.7633333333333333,
+  "Lists": 0.94,
+  "Music": 0.9266666666666666,
+  "News": 0.7933333333333333,
+  "Question": 0.39,
+  "SmartHome": 0.8233333333333334,
+  "Transport": 0.8833333333333333,
+  "Weather": 0.9
+ },
+ "teach_items": 287,
+ "arms": {
+  "base": {
+   "teach_acc": 0.010452961672473868,
+   "teach_per_label_source": {
+    "Cooking|massive_test": 0.0139,
+    "Cooking|hwu64": 0.0385,
+    "Takeaway|massive_test": 0.0,
+    "Takeaway|hwu64": 0.0
+   },
+   "retention": 1.0,
+   "retention_wilson_lo": 0.998397224080223,
+   "exam_acc": 0.7976666666666666,
+   "identical_outputs": 1.0,
+   "new_label_leak_on_exam": 0,
+   "retention_per_kind_and_source": {
+    "Alarm": [
+     1.0,
+     283
+    ],
+    "Calendar": [
+     1.0,
+     184
+    ],
+    "Email": [
+     1.0,
+     229
+    ],
+    "Lists": [
+     1.0,
+     282
+    ],
+    "Music": [
+     1.0,
+     278
+    ],
+    "News": [
+     1.0,
+     238
+    ],
+    "Question": [
+     1.0,
+     117
+    ],
+    "SmartHome": [
+     1.0,
+     247
+    ],
+    "Transport": [
+     1.0,
+     265
+    ],
+    "Weather": [
+     1.0,
+     270
+    ],
+    "source:hwu64": [
+     1.0,
+     878
+    ],
+    "source:massive_test": [
+     1.0,
+     287
+    ],
+    "source:massive_train": [
+     1.0,
+     1179
+    ],
+    "source:massive_val": [
+     1.0,
+     49
+    ]
+   },
+   "min_kind_retention": 1.0
+  },
+  "empty": {
+   "teach_acc": 0.010452961672473868,
+   "teach_per_label_source": {
+    "Cooking|massive_test": 0.0139,
+    "Cooking|hwu64": 0.0385,
+    "Takeaway|massive_test": 0.0,
+    "Takeaway|hwu64": 0.0
+   },
+   "retention": 1.0,
+   "retention_wilson_lo": 0.998397224080223,
+   "exam_acc": 0.7976666666666666,
+   "identical_outputs": 1.0,
+   "new_label_leak_on_exam": 0,
+   "retention_per_kind_and_source": {
+    "Alarm": [
+     1.0,
+     283
+    ],
+    "Calendar": [
+     1.0,
+     184
+    ],
+    "Email": [
+     1.0,
+     229
+    ],
+    "Lists": [
+     1.0,
+     282
+    ],
+    "Music": [
+     1.0,
+     278
+    ],
+    "News": [
+     1.0,
+     238
+    ],
+    "Question": [
+     1.0,
+     117
+    ],
+    "SmartHome": [
+     1.0,
+     247
+    ],
+    "Transport": [
+     1.0,
+     265
+    ],
+    "Weather": [
+     1.0,
+     270
+    ],
+    "source:hwu64": [
+     1.0,
+     878
+    ],
+    "source:massive_test": [
+     1.0,
+     287
+    ],
+    "source:massive_train": [
+     1.0,
+     1179
+    ],
+    "source:massive_val": [
+     1.0,
+     49
+    ]
+   },
+   "min_kind_retention": 1.0
+  },
+  "real_101": {
+   "teach_acc": 0.8536585365853658,
+   "teach_per_label_source": {
+    "Cooking|massive_test": 0.8472,
+    "Cooking|hwu64": 0.8269,
+    "Takeaway|massive_test": 0.8421,
+    "Takeaway|hwu64": 0.8774
+   },
+   "retention": 0.9966569160050146,
+   "retention_wilson_lo": 0.9934167166830384,
+   "exam_acc": 0.7976666666666666,
+   "identical_outputs": 0.9866666666666667,
+   "new_label_leak_on_exam": 29,
+   "retention_per_kind_and_source": {
+    "Alarm": [
+     1.0,
+     283
+    ],
+    "Calendar": [
+     1.0,
+     184
+    ],
+    "Email": [
+     1.0,
+     229
+    ],
+    "Lists": [
+     1.0,
+     282
+    ],
+    "Music": [
+     1.0,
+     278
+    ],
+    "News": [
+     1.0,
+     238
+    ],
+    "Question": [
+     0.9914529914529915,
+     117
+    ],
+    "SmartHome": [
+     0.9838056680161943,
+     247
+    ],
+    "Transport": [
+     0.9886792452830189,
+     265
+    ],
+    "Weather": [
+     1.0,
+     270
+    ],
+    "source:hwu64": [
+     0.9954441913439636,
+     878
+    ],
+    "source:massive_test": [
+     0.9965156794425087,
+     287
+    ],
+    "source:massive_train": [
+     0.9974554707379135,
+     1179
+    ],
+    "source:massive_val": [
+     1.0,
+     49
+    ]
+   },
+   "min_kind_retention": 0.9838056680161943
+  },
+  "real_202": {
+   "teach_acc": 0.867595818815331,
+   "teach_per_label_source": {
+    "Cooking|massive_test": 0.8472,
+    "Cooking|hwu64": 0.8654,
+    "Takeaway|massive_test": 0.8246,
+    "Takeaway|hwu64": 0.9057
+   },
+   "retention": 0.9987463435018805,
+   "retention_wilson_lo": 0.9963203679248535,
+   "exam_acc": 0.8003333333333333,
+   "identical_outputs": 0.9893333333333333,
+   "new_label_leak_on_exam": 16,
+   "retention_per_kind_and_source": {
+    "Alarm": [
+     1.0,
+     283
+    ],
+    "Calendar": [
+     1.0,
+     184
+    ],
+    "Email": [
+     1.0,
+     229
+    ],
+    "Lists": [
+     1.0,
+     282
+    ],
+    "Music": [
+     1.0,
+     278
+    ],
+    "News": [
+     1.0,
+     238
+    ],
+    "Question": [
+     0.9914529914529915,
+     117
+    ],
+    "SmartHome": [
+     0.9919028340080972,
+     247
+    ],
+    "Transport": [
+     1.0,
+     265
+    ],
+    "Weather": [
+     1.0,
+     270
+    ],
+    "source:hwu64": [
+     0.9988610478359908,
+     878
+    ],
+    "source:massive_test": [
+     1.0,
+     287
+    ],
+    "source:massive_train": [
+     0.998303647158609,
+     1179
+    ],
+    "source:massive_val": [
+     1.0,
+     49
+    ]
+   },
+   "min_kind_retention": 0.9914529914529915
+  },
+  "real_303": {
+   "teach_acc": 0.8362369337979094,
+   "teach_per_label_source": {
+    "Cooking|massive_test": 0.8889,
+    "Cooking|hwu64": 0.9231,
+    "Takeaway|massive_test": 0.6667,
+    "Takeaway|hwu64": 0.8491
+   },
+   "retention": 0.994985374007522,
+   "retention_wilson_lo": 0.9912549461045771,
+   "exam_acc": 0.7953333333333333,
+   "identical_outputs": 0.9866666666666667,
+   "new_label_leak_on_exam": 29,
+   "retention_per_kind_and_source": {
+    "Alarm": [
+     1.0,
+     283
+    ],
+    "Calendar": [
+     1.0,
+     184
+    ],
+    "Email": [
+     1.0,
+     229
+    ],
+    "Lists": [
+     0.9964539007092199,
+     282
+    ],
+    "Music": [
+     1.0,
+     278
+    ],
+    "News": [
+     1.0,
+     238
+    ],
+    "Question": [
+     0.9658119658119658,
+     117
+    ],
+    "SmartHome": [
+     0.9757085020242915,
+     247
+    ],
+    "Transport": [
+     0.9962264150943396,
+     265
+    ],
+    "Weather": [
+     1.0,
+     270
+    ],
+    "source:hwu64": [
+     0.9920273348519362,
+     878
+    ],
+    "source:massive_test": [
+     1.0,
+     287
+    ],
+    "source:massive_train": [
+     0.9957591178965225,
+     1179
+    ],
+    "source:massive_val": [
+     1.0,
+     49
+    ]
+   },
+   "min_kind_retention": 0.9658119658119658
+  },
+  "shuffled": {
+   "teach_acc": 0.003484320557491289,
+   "teach_per_label_source": {
+    "Cooking|massive_test": 0.0,
+    "Cooking|hwu64": 0.0,
+    "Takeaway|massive_test": 0.0175,
+    "Takeaway|hwu64": 0.0
+   },
+   "retention": 0.9966569160050146,
+   "retention_wilson_lo": 0.9934167166830384,
+   "exam_acc": 0.8003333333333333,
+   "identical_outputs": 0.9856666666666667,
+   "new_label_leak_on_exam": 21,
+   "retention_per_kind_and_source": {
+    "Alarm": [
+     1.0,
+     283
+    ],
+    "Calendar": [
+     1.0,
+     184
+    ],
+    "Email": [
+     1.0,
+     229
+    ],
+    "Lists": [
+     1.0,
+     282
+    ],
+    "Music": [
+     0.9964028776978417,
+     278
+    ],
+    "News": [
+     0.9957983193277311,
+     238
+    ],
+    "Question": [
+     0.9829059829059829,
+     117
+    ],
+    "SmartHome": [
+     0.9838056680161943,
+     247
+    ],
+    "Transport": [
+     1.0,
+     265
+    ],
+    "Weather": [
+     1.0,
+     270
+    ],
+    "source:hwu64": [
+     0.9965831435079726,
+     878
+    ],
+    "source:massive_test": [
+     0.9965156794425087,
+     287
+    ],
+    "source:massive_train": [
+     0.996607294317218,
+     1179
+    ],
+    "source:massive_val": [
+     1.0,
+     49
+    ]
+   },
+   "min_kind_retention": 0.9829059829059829
+  },
+  "unrelated": {
+   "teach_acc": 0.010452961672473868,
+   "teach_per_label_source": {
+    "Cooking|massive_test": 0.0139,
+    "Cooking|hwu64": 0.0385,
+    "Takeaway|massive_test": 0.0,
+    "Takeaway|hwu64": 0.0
+   },
+   "retention": 0.9962390305056414,
+   "retention_wilson_lo": 0.9928672548624403,
+   "exam_acc": 0.7946666666666666,
+   "identical_outputs": 0.997,
+   "new_label_leak_on_exam": 9,
+   "retention_per_kind_and_source": {
+    "Alarm": [
+     1.0,
+     283
+    ],
+    "Calendar": [
+     1.0,
+     184
+    ],
+    "Email": [
+     1.0,
+     229
+    ],
+    "Lists": [
+     0.9680851063829787,
+     282
+    ],
+    "Music": [
+     1.0,
+     278
+    ],
+    "News": [
+     1.0,
+     238
+    ],
+    "Question": [
+     1.0,
+     117
+    ],
+    "SmartHome": [
+     1.0,
+     247
+    ],
+    "Transport": [
+     1.0,
+     265
+    ],
+    "Weather": [
+     1.0,
+     270
+    ],
+    "source:hwu64": [
+     0.9965831435079726,
+     878
+    ],
+    "source:massive_test": [
+     1.0,
+     287
+    ],
+    "source:massive_train": [
+     0.9949109414758269,
+     1179
+    ],
+    "source:massive_val": [
+     1.0,
+     49
+    ]
+   },
+   "min_kind_retention": 0.9680851063829787
+  }
+ }
+}
